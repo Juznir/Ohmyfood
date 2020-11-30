@@ -1,0 +1,150 @@
+/*/ Boutons /*/
+
+.btn {
+    background: linear-gradient($second-color, $first-color);
+    padding: 1em;
+    color: #FFF;
+    @include radius (2em);
+    margin-top: 1.6em;
+    @include shadow (lighten($fourth-color, 45%));
+    display: flex;
+    justify-content: center;
+    width: 11em;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(lighten($second-color, 5%), lighten($first-color, 5%));;
+        @include shadow (lighten($fourth-color, 25%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        @include radius (2em);
+    }
+}
+ 
+    /*/ Bouton commander /*/
+
+    .command {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4em;
+        background-color: #F2F2F2;
+        position: relative;  
+    }
+
+    /*/ Bouton Coeur /*/ 
+
+    .far {
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: linear-gradient($second-color, $first-color);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+    }
+
+/*/ Blocs Fonctionnement -- Accueil /*/
+
+.fonctionnement {
+    margin-top: 3em;
+}
+.fonction__element {
+        position: relative;
+        z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+        .fas {
+            color: $first-color;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: lighten($first-color, 30%);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        @include radius;
+    }
+}
+
+/*/ Blocs restaurants -- Accueil /*/
+
+.card {
+    position: relative;
+    z-index: 1;
+    
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include shadow (lighten($fourth-color, 35%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        @include radius;
+    }
+}
+
+/*/ Menu /*/ 
+
+.partie__recette {
+    position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include shadow (lighten($fourth-color, 35%));
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            @include radius;
+        }
+}

@@ -63,105 +63,36 @@ h5 {
 }
 
 /*/ Footer /*/
-.footer {
+.foot {
   color: #FFF;
   background-color: #353535;
   display: flex;
   flex-direction: column;
   padding-bottom: 2em;
 }
-.footer__img {
+.foot__img {
   width: 8em;
   padding: 3em 0 1.5em 2em;
 }
-.footer__list {
+.foot__list {
   display: flex;
   margin-left: 2em;
   flex-direction: row;
 }
-.footer__list--icon {
+.foot__list--icon {
   width: 1.5em;
 }
-.footer h4 {
+.foot h4 {
   margin: 0;
   margin: 0.3em;
+  color: #FFF;
 }
-.footer .fas {
+.foot .fas {
   font-size: 0.9em;
   margin: 0.2em 0.5em;
 }
-.footer a:hover {
+.foot a:hover {
   text-decoration: underline;
-}
-
-/*/ Boutons /*/
-.btn__explore {
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 1em;
-  color: #FFF;
-  border-radius: 2em;
-  margin-top: 1.6em;
-  box-shadow: 0.1rem 0.1rem 1rem #a8a8a8;
-  display: flex;
-  justify-content: center;
-  width: 11em;
-}
-.btn__explore:hover {
-  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
-  background: linear-gradient(#ff93e1, #a16be0);
-}
-
-/*/ Bouton commander /*/
-.command {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 4em;
-  background-color: #F2F2F2;
-  position: relative;
-}
-
-/*/ Blocs Fonctionnement -- Accueil /*/
-.fonctionnement {
-  margin-top: 3em;
-}
-
-.fonction__element {
-  background-color: #f4f4f4;
-  margin: 1.5em 2em;
-  border-radius: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-direction: row;
-  box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
-  position: relative;
-  width: 85%;
-  max-width: 640px;
-  height: 4em;
-}
-.fonction__element--number {
-  padding: 6px 10px;
-  background-color: #9356DC;
-  border-radius: 6em;
-  color: #FFF;
-  font-size: 0.9em;
-  position: absolute;
-  right: 97%;
-}
-.fonction__element .fas {
-  color: #757575;
-  font-size: 1.3em;
-  padding-right: 6px;
-  position: absolute;
-  left: 10%;
-}
-.fonction__element:hover {
-  background-color: #f2eafb;
-  box-shadow: 0.1rem 0.1rem 1rem #a8a8a8;
-}
-.fonction__element:hover .fas {
-  color: #9356DC;
 }
 
 /*/ Blocs restaurants -- Accueil /*/
@@ -174,13 +105,12 @@ h5 {
 }
 
 .card {
-  border-radius: 1.25rem;
+  border-radius: 1.2em;
   box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
   height: 16.5em;
   background-color: #FFF;
   width: 90%;
   margin: 0 0 1.5em 1.5em;
-  position: relative;
 }
 .card__img {
   border-radius: 1.25rem 1.25rem 0 0;
@@ -215,11 +145,37 @@ h5 {
   font-size: 1.5em;
   padding: 0.2em 0.7em;
 }
-.card .far:hover {
-  color: linear-gradient(#FF79DA, #9356DC);
+
+/*/ Bloc Fonctionnement Accueil /*/
+.fonction__element {
+  background-color: #f4f4f4;
+  margin: 1.5em 2em;
+  border-radius: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
+  width: 85%;
+  max-width: 640px;
+  height: 4em;
 }
-.card:hover {
-  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
+.fonction__element--number {
+  padding: 6px 10px;
+  background-color: #9356DC;
+  border-radius: 6em;
+  color: #FFF;
+  font-size: 0.9em;
+  position: absolute;
+  right: 97%;
+}
+.fonction__element .fas {
+  color: #757575;
+  font-size: 1.3em;
+  padding-right: 6px;
+  position: absolute;
+  left: 10%;
 }
 
 /*/ Header Menus /*/
@@ -299,9 +255,6 @@ h5 {
   font-weight: 600;
   width: 15%;
 }
-.partie__recette:hover {
-  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
-}
 
 /*/ Header -- Accueil /*/
 #header__local {
@@ -311,7 +264,6 @@ h5 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: 15%;
 }
 
 /*/ Explorer -- Accueil /*/
@@ -361,8 +313,31 @@ h5 {
     max-width: 23em;
   }
 
+  #restaurant__title {
+    padding-left: 15%;
+  }
+
   h1 {
     font-size: xx-large;
+  }
+
+  .foot__contenent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .foot__list {
+    margin: 0;
+  }
+  .foot__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .foot__img {
+    width: 20%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -385,6 +360,140 @@ h5 {
     margin: 0;
     font-size: 1em;
   }
+}
+/*/ Boutons /*/
+.btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 1em;
+  color: #FFF;
+  border-radius: 2em;
+  margin-top: 1.6em;
+  box-shadow: 0.1rem 0.1rem 1rem #a8a8a8;
+  display: flex;
+  justify-content: center;
+  width: 11em;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0.1rem 0.1rem 1rem #757575;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 2em;
+}
+
+/*/ Bouton commander /*/
+.command {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+  background-color: #F2F2F2;
+  position: relative;
+}
+
+/*/ Bouton Coeur /*/
+.far {
+  position: relative;
+  z-index: 1;
+}
+.far:hover::after {
+  opacity: 1;
+}
+.far::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+/*/ Blocs Fonctionnement -- Accueil /*/
+.fonctionnement {
+  margin-top: 3em;
+}
+
+.fonction__element {
+  position: relative;
+  z-index: 1;
+}
+.fonction__element:hover::after {
+  opacity: 1;
+}
+.fonction__element:hover .fas {
+  color: #9356DC;
+}
+.fonction__element::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #e4d5f6;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 1.2em;
+}
+
+/*/ Blocs restaurants -- Accueil /*/
+.card {
+  position: relative;
+  z-index: 1;
+}
+.card:hover::after {
+  opacity: 1;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0.1rem 0.1rem 1rem #8e8e8e;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 1.2em;
+}
+
+/*/ Menu /*/
+.partie__recette {
+  position: relative;
+  z-index: 1;
+}
+.partie__recette:hover::after {
+  opacity: 1;
+}
+.partie__recette::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0.1rem 0.1rem 1rem #8e8e8e;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */

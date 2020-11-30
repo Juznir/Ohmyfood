@@ -18,12 +18,28 @@
         min-width: 18em;
         max-width: 23em;
     }
-    
-    
+    #restaurant__title {
+        padding-left: 15%;
+    }
     h1 {
         font-size: xx-large;
     }
-
+    .foot__contenent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .foot {
+        &__list {
+            @include no-margin;
+        }
+        &__logo {
+            @include center;
+        }
+        &__img {
+            width: 20%;
+        }
+    }
 }
 
 @media #{$large-screen} {

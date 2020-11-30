@@ -25,7 +25,7 @@
 
 /*/ Footer /*/
 
-.footer {
+.foot {
     color: $fifth-color;
     background-color: $fourth-color;
     display: flex;
@@ -46,6 +46,7 @@
     h4 {
         @include no-margin;
         margin: 0.3em;
+        color: $fifth-color;
     }
     .fas {
         font-size: $small-font;
@@ -53,77 +54,6 @@
     }
     a:hover {
         text-decoration: underline;
-    }
-}
-
-/*/ Boutons /*/
-
-.btn__explore {
-    background: linear-gradient($second-color, $first-color);
-    padding: 1em;
-    color: #FFF;
-    @include radius (2em);
-    margin-top: 1.6em;
-    @include shadow (lighten($fourth-color, 45%));
-    display: flex;
-    justify-content: center;
-    width: 11em;
-    &:hover {
-        @include shadow (lighten($fourth-color, 15%));
-        background: linear-gradient(lighten($second-color, 5%), lighten($first-color, 5%));
-    }
-}
- 
-    /*/ Bouton commander /*/
-
-    .command {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 4em;
-        background-color: #F2F2F2;
-        position: relative;  
-    }
-
-    
-
-/*/ Blocs Fonctionnement -- Accueil /*/
-
-.fonctionnement {
-    margin-top: 3em;
-}
-.fonction__element {
-        background-color: lighten($fourth-color, 75%);
-        margin: 1.5em 2em;
-        @include radius;
-        @include center;
-        flex-direction: row;
-        @include shadow (lighten($fourth-color, 55%));
-        position: relative;
-        width: 85%;
-        max-width: 640px;
-        height: 4em;
-    &--number {
-        padding: 6px 10px;
-        background-color: $first-color;
-        @include radius(6em);
-        color: $fifth-color;
-        font-size: $small-font;
-        position: absolute;
-        right: 97%;
-    }
-    .fas {
-        color: lighten($fourth-color, 25%);
-        font-size: $large-font;
-        padding-right: 6px;
-        position: absolute;
-        left: 10%;
-    }
-    &:hover {
-        background-color: lighten($first-color, 35%);
-        @include shadow (lighten($fourth-color, 45%));
-        .fas {
-            color: $first-color;
-        }
     }
 }
 
@@ -135,13 +65,12 @@
 }
 
 .card {
-    border-radius: 1.25rem;
+    @include radius;
     @include shadow (lighten($fourth-color, 55%));
     height: 16.5em;
     background-color: $fifth-color;
     width: 90%;
     margin: 0 0 1.5em 1.5em;
-    position: relative;
     &__img {
         border-radius: 1.25rem 1.25rem 0 0;
         width: 100%;
@@ -174,12 +103,36 @@
     .far {
         font-size: $xlarge-font;
         padding: 0.2em 0.7em;
-        &:hover {
-            color: linear-gradient($second-color, $first-color);
-        }
     }
-    &:hover {
-        @include shadow (lighten($fourth-color, 15%));
+}
+
+/*/ Bloc Fonctionnement Accueil /*/ 
+
+.fonction__element {
+    background-color: lighten($fourth-color, 75%);
+    margin: 1.5em 2em;
+    @include radius;
+    @include center;
+    flex-direction: row;
+    @include shadow (lighten($fourth-color, 55%));
+    width: 85%;
+    max-width: 640px;
+    height: 4em;
+    &--number {
+        padding: 6px 10px;
+        background-color: $first-color;
+        @include radius(6em);
+        color: $fifth-color;
+        font-size: $small-font;
+        position: absolute;
+        right: 97%;
+    }
+    .fas {
+        color: lighten($fourth-color, 25%);
+        font-size: $large-font;
+        padding-right: 6px;
+        position: absolute;
+        left: 10%;
     }
 }
 
@@ -260,8 +213,6 @@
             font-weight: 600;
             width: 15%;
         }
-        &:hover {
-            @include shadow (lighten($fourth-color, 15%));
-        }
     }
 }
+
