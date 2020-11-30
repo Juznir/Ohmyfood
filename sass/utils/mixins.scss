@@ -1,0 +1,18 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin no-margin {
+    margin: 0;
+}
+
+@mixin shadow($color) {
+    box-shadow: 0.1rem 0.1rem 1rem $color;
+}
+
+@mixin radius($degree: 1.2em) {
+    border-radius: $degree;
+}

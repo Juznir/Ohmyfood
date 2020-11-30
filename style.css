@@ -1,0 +1,390 @@
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  margin: 0;
+  max-width: 1700px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 0 1em 1em 1em;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+h5 {
+  margin: 0.8em 0;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+/*/ Header /*/
+.header__logo {
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 0.5em #a8a8a8;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+}
+.header__return {
+  position: absolute;
+  left: 2em;
+}
+.header__return .fas {
+  font-size: 1.5em;
+}
+
+.logo-ohmyfood {
+  max-width: 13em;
+  max-height: 2.7em;
+}
+
+/*/ Footer /*/
+.footer {
+  color: #FFF;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+.footer__img {
+  width: 8em;
+  padding: 3em 0 1.5em 2em;
+}
+.footer__list {
+  display: flex;
+  margin-left: 2em;
+  flex-direction: row;
+}
+.footer__list--icon {
+  width: 1.5em;
+}
+.footer h4 {
+  margin: 0;
+  margin: 0.3em;
+}
+.footer .fas {
+  font-size: 0.9em;
+  margin: 0.2em 0.5em;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/*/ Boutons /*/
+.btn__explore {
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 1em;
+  color: #FFF;
+  border-radius: 2em;
+  margin-top: 1.6em;
+  box-shadow: 0.1rem 0.1rem 1rem #a8a8a8;
+  display: flex;
+  justify-content: center;
+  width: 11em;
+}
+.btn__explore:hover {
+  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
+  background: linear-gradient(#ff93e1, #a16be0);
+}
+
+/*/ Bouton commander /*/
+.command {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+  background-color: #F2F2F2;
+  position: relative;
+}
+
+/*/ Blocs Fonctionnement -- Accueil /*/
+.fonctionnement {
+  margin-top: 3em;
+}
+
+.fonction__element {
+  background-color: #f4f4f4;
+  margin: 1.5em 2em;
+  border-radius: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
+  position: relative;
+  width: 85%;
+  max-width: 640px;
+  height: 4em;
+}
+.fonction__element--number {
+  padding: 6px 10px;
+  background-color: #9356DC;
+  border-radius: 6em;
+  color: #FFF;
+  font-size: 0.9em;
+  position: absolute;
+  right: 97%;
+}
+.fonction__element .fas {
+  color: #757575;
+  font-size: 1.3em;
+  padding-right: 6px;
+  position: absolute;
+  left: 10%;
+}
+.fonction__element:hover {
+  background-color: #f2eafb;
+  box-shadow: 0.1rem 0.1rem 1rem #a8a8a8;
+}
+.fonction__element:hover .fas {
+  color: #9356DC;
+}
+
+/*/ Blocs restaurants -- Accueil /*/
+.bloc__card {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  border-radius: 1.25rem;
+  box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
+  height: 16.5em;
+  background-color: #FFF;
+  width: 90%;
+  margin: 0 0 1.5em 1.5em;
+  position: relative;
+}
+.card__img {
+  border-radius: 1.25rem 1.25rem 0 0;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  object-fit: cover;
+  max-height: 11.5em;
+}
+.card__new {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  color: #008766;
+  background-color: #21ffc9;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border-radius: 0.2em;
+  margin: 0.8em;
+}
+.card__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8em 1em;
+}
+.card h3 {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+.card .far {
+  font-size: 1.5em;
+  padding: 0.2em 0.7em;
+}
+.card .far:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
+}
+.card:hover {
+  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
+}
+
+/*/ Header Menus /*/
+.illustration {
+  height: 16em;
+  width: 100%;
+  position: relative;
+}
+.illustration__img {
+  height: 100%;
+  width: 100%;
+}
+.illustration__picture {
+  max-height: 15em;
+}
+.illustration__title {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 3em;
+  background-color: #f4f4f4;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+.illustration__title .far {
+  position: relative;
+  top: 1.1em;
+  font-size: 1.5em;
+}
+
+/*/ Menus /*/
+.menu {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.partie {
+  width: 90%;
+}
+.partie h3 {
+  margin: 0 0 0.2em 0;
+}
+.partie__titre {
+  border-bottom: 4px #99E2D0 solid;
+  width: 3em;
+}
+.partie__recette {
+  margin: 1em 0;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em;
+  border-radius: 20px;
+  height: 3.3em;
+  box-shadow: 0.1rem 0.1rem 1rem #c1c1c1;
+}
+.partie__recette--description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.3em 0;
+  width: 80%;
+}
+.partie__recette--description p {
+  font-size: 0.9em;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.partie__recette--prix {
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 600;
+  width: 15%;
+}
+.partie__recette:hover {
+  box-shadow: 0.1rem 0.1rem 1rem #5b5b5b;
+}
+
+/*/ Header -- Accueil /*/
+#header__local {
+  background-color: #e8e8e8;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 15%;
+}
+
+/*/ Explorer -- Accueil /*/
+#header__explore {
+  background-color: #f4f4f4;
+  height: 17em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2em;
+  text-align: center;
+}
+
+#header__icon {
+  margin: 0 1em;
+}
+
+/*/ Restaurants -- Accueil /*/
+#restaurant {
+  background-color: #f4f4f4;
+  padding-top: 3em;
+}
+
+@media screen and (min-width: 760px) {
+  #explore__fonctionnement {
+    display: flex;
+  }
+
+  #header__explore {
+    width: 40%;
+    height: inherit;
+  }
+
+  .fonctionnement {
+    width: 60%;
+  }
+
+  .bloc__card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .card {
+    min-width: 18em;
+    max-width: 23em;
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .partie {
+    padding: 0.5em;
+    width: 30%;
+  }
+  .partie__recette {
+    height: 4em;
+    margin: 0.5em;
+    padding: 0.4em;
+  }
+  .partie__recette h3 {
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

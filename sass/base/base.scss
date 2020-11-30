@@ -1,0 +1,38 @@
+body {
+    width: 100%;
+    font-family: $second-font;
+    font-size: 1.3em;
+    @include no-margin;
+    max-width: 1700px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    @include no-margin;
+}
+
+h1 {
+    font-family: $first-font;
+    font-size: $xlarge-font;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: $xlarge-font;
+    margin: 0 1em 1em 1em;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: $medium-font;
+}
+
+h5 {
+    margin: 0.8em 0;
+    font-weight: 300;
+    font-size: $medium-font;
+}

@@ -1,0 +1,29 @@
+/*/ Header -- Accueil /*/
+
+#header__local {
+    background-color: lighten($fourth-color, 70%);
+    height: 3em;
+    @include center;
+    padding-right: 15%;
+}
+
+/*/ Explorer -- Accueil /*/
+
+#header__explore {
+    background-color: lighten($fourth-color, 75%);
+    height: 17em;
+    @include center;
+    padding: 0 2em;
+    text-align: center;
+}
+
+#header__icon {
+    margin: 0 1em;
+}
+
+/*/ Restaurants -- Accueil /*/ 
+
+#restaurant {
+    background-color: lighten($fourth-color, 75%);
+    padding-top: 3em;
+}
