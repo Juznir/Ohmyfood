@@ -8,6 +8,18 @@
     }
     .fonctionnement {
         width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fonction {
+        width: 80%;
+        &__element {
+            margin: 1.5em 0em;
+            width: 100%;
+        }
     }
     .bloc__card {
         display: flex;
@@ -47,6 +59,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
     }
     .partie {
         padding: 0.5em;
@@ -54,11 +67,42 @@
         &__recette {
             height: 4em;
             margin: 0.5em;
-            padding: 0.4em;
             h3 {
                 @include no-margin;
-                font-size: $medium-font;
+                font-size: $xxsmall-font;
             }
+            p {
+                font-size: $xxsmall-font;
+            }
+        }
+    }
+    .partie__recette {
+        transition: width 500ms;
+        -o-transition: width 500ms;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+        &:hover {
+            cursor: pointer;
+            .partie__recette--description {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media #{$small-screen} {
+    body {
+        font-size: $small-font;
+    }
+    .logo-ohmyfood {
+        width: 11em;
+    }
+    h1 {
+        padding-top: 1em;
+    }
+    .illustration__title {
+        .far {
+            padding-top: 0.8em;
         }
     }
 }

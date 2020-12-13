@@ -13,6 +13,10 @@
     box-shadow: 0.1rem 0.1rem 1rem $color;
 }
 
-@mixin radius($degree: 1.2em) {
+@mixin radius($degree: 20px) {
     border-radius: $degree;
+}
+
+@mixin adjust-bottom {
+    bottom: 3em;
 }

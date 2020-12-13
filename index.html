@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
         <title>Ohmyfood!</title>
         <meta name="description" content="Avec Ohmyfood, réservez en un clic une expérience culinaire inoubliable !">
@@ -12,6 +13,8 @@
     </head> 
 
     <body>
+        <div class="spinner"><div class="spinner__figure"></div></div>
+        <div class="bloc__page">
         <header class="header__logo">
                 <img src= "photos/logo.png" alt="Logo de Ohmyfood" class="logo-ohmyfood"/>
         </header>
@@ -74,8 +77,10 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="card_description--fav">
-                            <i class="far fa-heart"></i>
+                        <div class="container"> 
+                            <i class="far fa-heart heart">
+                                <i class="fas fa-heart heart-color"></i>  
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -92,8 +97,10 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <div class="card_description--fav">
-                            <i class="far fa-heart"></i>
+                        <div class="container"> 
+                            <i class="far fa-heart heart">
+                                <i class="fas fa-heart heart-color"></i>  
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -109,8 +116,10 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <div class="card_description--fav">
-                            <i class="far fa-heart"></i>
+                        <div class="container"> 
+                            <i class="far fa-heart heart">
+                                <i class="fas fa-heart heart-color"></i>  
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -126,8 +135,10 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <div class="card_description--fav">
-                            <i class="far fa-heart"></i>
+                        <div class="container"> 
+                            <i class="far fa-heart heart">
+                                <i class="fas fa-heart heart-color"></i>  
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -156,5 +167,6 @@
                 </div>
             </div>
         </footer>
+        </div>
     </body>
 </html>

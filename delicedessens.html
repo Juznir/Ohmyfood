@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
         <title>Ohmyfood! - Le délice des sens</title>
         <meta name="description" content="Avec Ohmyfood, réservez votre menu au restaurant Le délice des sens !">
@@ -11,6 +12,7 @@
         <script src="https://kit.fontawesome.com/5fad146986.js" crossorigin="anonymous"></script>
     </head> 
     <body>
+        <div class="bloc__page">
         <header class="header__logo">
             <div class="header__return">
                 <a href="index.html"><i class="fas fa-arrow-left"></i></a>
@@ -26,15 +28,21 @@
             </div>
             <div class="illustration__title">
                 <h1>Le délice des sens</h1>
-                <i class="far fa-heart"></i>
+                <div class="container"> 
+                    <i class="far fa-heart heart">
+                      <i class="fas fa-heart heart-color"></i>  
+                    </i>
+                </div>
             </div>
         </div>
 
-        <section class="menu">
+            <section class="menu">
+
             <div class="partie">
                 <div class="partie__titre">
                     <h5>ENTRÉES</h5>
                 </div>
+                <div class="partie__recette--first">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Tartare de thon</h3>
@@ -43,7 +51,10 @@
                     <div class="partie__recette--prix">
                         <p>25€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--second">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Bouchée de homard croustillant</h3>
@@ -52,7 +63,10 @@
                     <div class="partie__recette--prix">
                         <p>35€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--third">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Velouté de cèpes</h3>
@@ -61,6 +75,8 @@
                     <div class="partie__recette--prix">
                         <p>20€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
+                </div>
                 </div>
             </div>
 
@@ -68,6 +84,7 @@
                 <div class="partie__titre">
                     <h5>PLATS</h5>
                 </div>
+                <div class="partie__recette--first">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Poulet rôti aux herbes de Provence </h3>
@@ -76,7 +93,10 @@
                     <div class="partie__recette--prix">
                         <p>40€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--second">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Langouste rôtie </h3>
@@ -85,7 +105,10 @@
                     <div class="partie__recette--prix">
                         <p>35€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--third">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Côte de boeuf Angus</h3>
@@ -94,6 +117,8 @@
                     <div class="partie__recette--prix">
                         <p>44€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
+                </div>
                 </div>
             </div>
 
@@ -101,6 +126,7 @@
                 <div class="partie__titre">
                     <h5>DESSERTS</h5>
                 </div>
+                <div class="partie__recette--first">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Farandole de desserts</h3>
@@ -109,7 +135,10 @@
                     <div class="partie__recette--prix">
                         <p>18€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--second">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Crème brulée</h3>
@@ -118,7 +147,10 @@
                     <div class="partie__recette--prix">
                         <p>22€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
                 </div>
+                </div>
+                <div class="partie__recette--third">
                 <div class="partie__recette">
                     <div class="partie__recette--description">
                         <h3>Tiramisu</h3>
@@ -127,15 +159,15 @@
                     <div class="partie__recette--prix">
                         <p>23€</p>
                     </div>
+                    <div class="partie__recette--valid"><span class="check"><i class="far fa-check-circle"></i></span></div>
+                </div>
                 </div>
             </div>
         </section>
-              
     
         <section class="command">
             <div class="btn">Commander</div>
-        </section>
-                 
+        </section> 
 
         <footer class="foot">
             <div class="foot__logo">
@@ -158,5 +190,6 @@
                 </div>
             </div>
         </footer>
+        </div>
     </body>
 </html>

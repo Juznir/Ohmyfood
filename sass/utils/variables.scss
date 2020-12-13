@@ -9,6 +9,7 @@ $seventh-color: #F2F2F2;
 $first-font: 'Shrikhand', cursive;
 $second-font: 'Roboto', sans-serif;
 
+$xxsmall-font: 0.7em;
 $xsmall-font: 0.8em;
 $small-font: 0.9em;
 $medium-font: 1em;
@@ -16,5 +17,6 @@ $large-font: 1.3em;
 $xlarge-font: 1.5em;
 $xxlarge-font: 1.8em;
 
+$small-screen: "screen and (max-width: 415px)";
 $medium-screen: "screen and (min-width: 760px)";
 $large-screen : "screen and (min-width: 1024px)";

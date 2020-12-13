@@ -1,18 +1,146 @@
+/*/ Spinner /*/
+
+@-o-keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes transparency {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@-moz-keyframes transparency {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@-webkit-keyframes transparency {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@keyframes transparency {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+.spinner {
+    width: 100%;
+    max-width: 1700px;
+    min-height: 100%;
+    z-index: 2;
+    background-color: $seventh-color;
+    position: absolute;
+    display: grid;
+    place-items: center center;
+    animation: transparency 2500ms forwards;
+    -moz-animation: transparency 2500ms forwards;
+    -o-animation: transparency 2500ms forwards;
+    -webkit-animation: transparency 2500ms forwards;
+    &__figure {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 10px solid $first-color;
+        border-bottom-color: transparent;
+        border-radius: 100%;
+        animation: loading 1s ease-out infinite;
+        -moz-animation: loading 1s ease-out infinite;
+        -o-animation: loading 1s ease-out infinite;
+        -webkit-animation: loading 1s ease-out infinite;
+    }
+}
+
 /*/ Boutons /*/
 
 .btn {
-    background: linear-gradient($second-color, $first-color);
-    padding: 1em;
-    color: #FFF;
-    @include radius (2em);
-    margin-top: 1.6em;
-    @include shadow (lighten($fourth-color, 45%));
-    display: flex;
-    justify-content: center;
-    width: 11em;
     position: relative;
     z-index: 1;
     &:hover {
+        cursor: pointer;
         &::after {
             opacity: 1;
         }
@@ -29,44 +157,51 @@
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
+        -webkit-transition: opacity 250ms;
+        -o-transition: opacity 250ms;
+        -moz-transition: opacity 250ms;
         @include radius (2em);
     }
 }
- 
-    /*/ Bouton commander /*/
+/*/ Icône coeur /*/ 
 
-    .command {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 4em;
-        background-color: #F2F2F2;
-        position: relative;  
-    }
-
-    /*/ Bouton Coeur /*/ 
-
-    .far {
-        position: relative;
-        z-index: 1;
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background-color: linear-gradient($second-color, $first-color);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
-    }
-
+.container{
+    position: absolute;
+    left: 80%; 
+}
+      
+.heart{
+    position:relative;
+    z-index:1;
+    cursor: pointer;
+}
+.heart-color{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    background: linear-gradient($second-color, $first-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity:0;
+    transform: scale(0);
+    transition:.3s ease;
+}
+      
+.heart:hover .heart-color{
+    transform:scale(1);
+    opacity:1;
+}
+      
+.heart:hover{
+    background: linear-gradient($second-color, $first-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px $fifth-color;
+}
+      
 /*/ Blocs Fonctionnement -- Accueil /*/
 
 .fonctionnement {
@@ -94,6 +229,9 @@
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
+        -webkit-transition: opacity 250ms;
+        -o-transition: opacity 250ms;
+        -moz-transition: opacity 250ms;
         @include radius;
     }
 }
@@ -105,6 +243,7 @@
     z-index: 1;
     
     &:hover {
+        cursor: pointer;
         &::after {
             opacity: 1;
         }
@@ -120,11 +259,14 @@
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
+        -webkit-transition: opacity 250ms;
+        -o-transition: opacity 250ms;
+        -moz-transition: opacity 250ms;
         @include radius;
     }
 }
 
-/*/ Menu /*/ 
+/*/ Menu apparition /*/ 
 
 .partie__recette {
     position: relative;
@@ -145,6 +287,193 @@
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
+            -webkit-transition: opacity 250ms;
+            -o-transition: opacity 250ms;
+            -moz-transition: opacity 250ms;
             @include radius;
         }
+}
+
+@-o-keyframes appearance {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    17% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0.3;
+    }
+    46% {
+        opacity: 0.6;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-moz-keyframes appearance {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    17% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0.3;
+    }
+    46% {
+        opacity: 0.6;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes appearance {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    17% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0.3;
+    }
+    46% {
+        opacity: 0.6;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes appearance {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    17% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0.3;
+    }
+    46% {
+        opacity: 0.6;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.partie__recette {
+    &--first {
+        animation: appearance 2s;
+        -moz-animation: appearance 2s;
+        -o-animation: appearance 2s;
+        -webkit-animation: appearance 2s;
+    }
+    &--second {
+        animation: appearance 3s;
+        -moz-animation: appearance 3s;
+        -o-animation: appearance 3s;
+        -webkit-animation: appearance 3s;
+    } 
+    &--third {
+        animation: appearance 4s;
+        -moz-animation: appearance 4s;
+        -o-animation: appearance 4s;
+        -webkit-animation: appearance 4s;
+    }
+    &--fourth {
+        animation: appearance 5s;
+        -moz-animation: appearance 5s;
+        -o-animation: appearance 5s;
+        -webkit-animation: appearance 5s;
+    }
+}
+
+/*/ Sélection d'un plat /*/
+
+.partie__recette {
+    &--description {
+        transition: width 500ms;
+        -o-transition: width 500ms;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+    }
+    &--valid {
+        min-height: 100%;
+        width: 0;
+        transform-origin: 100% 50%;
+        -moz-transform-origin: 100% 50%;
+        -o-transform-origin: 100% 50%;
+        -webkit-transform-origin: 100% 50%;
+        overflow: hidden;
+        background-color: $third-color;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: width 500ms;
+        -o-transition: width 500ms;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: inline-block;
+        }
+        }
+}
+
+
+.check {
+    transform: rotate(-270deg);
+    transition: transform 380ms ease-out;
+    -moz-transition: transform 380ms ease-out;
+    -o-transition: transform 380ms ease-out;
+    -webkit-transition: transform 380ms ease-out;
+    display: block;
+    .far {
+        color: $fifth-color;
+        size: 3px;
+    }
+}
+
+.partie__recette {
+    &:hover {
+        cursor: pointer;
+        .partie__recette {
+        &--description {
+            width: 60%;
+        }
+        &--valid {
+            width: 4em;
+            span {
+                transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+            }
+        }
+    } 
+    }
 }

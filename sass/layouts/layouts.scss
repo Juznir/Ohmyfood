@@ -4,14 +4,13 @@
     &__logo {
         height: 4em;
         @include center;
-        box-shadow: 0 0 0.5em (lighten($fourth-color, 45%));
         background-color: $fifth-color;
         display: flex;
         flex-direction: row;
     }
     &__return {
-        position: absolute;
-        left: 2em;
+        position: relative;
+        right: 20%;
         .fas {
             font-size: $xlarge-font;
         }
@@ -31,9 +30,11 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 2em;
+    position: relative;
     &__img {
         width: 8em;
         padding: 3em 0 1.5em 2em;
+        color: $seventh-color;
     }
     &__list {
         display: flex;
@@ -57,11 +58,37 @@
     }
 }
 
+/*/ Boutons /*/
+
+.btn {
+    background: linear-gradient($second-color, $first-color);
+    padding: 1em;
+    color: #FFF;
+    @include radius (2em);
+    margin-top: 1.6em;
+    @include shadow (lighten($fourth-color, 45%));
+    display: flex;
+    justify-content: center;
+    width: 11em;
+} 
+
+    /*/ Bouton commander /*/
+
+    .command {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4em;
+        background-color: #F2F2F2;
+        position: relative; 
+        @include adjust-bottom; 
+        margin-bottom: -3em;
+    }
+
 /*/ Blocs restaurants -- Accueil /*/
 
 .bloc__card {
-    width: 95%;
     @include center;
+    max-width: 1500px
 }
 
 .card {
@@ -102,6 +129,8 @@
     }
     .far {
         font-size: $xlarge-font;
+    }
+    .container {
         padding: 0.2em 0.7em;
     }
 }
@@ -139,11 +168,11 @@
 /*/ Header Menus /*/
 
 .illustration {
-    height: 16em;
     width: 100%;
     position: relative;
     &__img {
     height: 100%;
+    max-height: 1000px;
     width: 100%;
     }
     &__picture {
@@ -153,10 +182,11 @@
     display: flex;
     justify-content: space-around;
     position: relative;
-    bottom: 3em;
     background-color: lighten($fourth-color, 75%);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+    @include adjust-bottom;
+    margin-bottom: -0.1em;
     .far {
         position: relative;
         top: 1.1em;
@@ -173,6 +203,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    @include adjust-bottom;
 }
 
 .partie {
@@ -189,16 +220,25 @@
         background-color: $fifth-color;
         display: flex;
         justify-content: space-between;
-        padding: 0.6em;
-        border-radius: 20px;
-        height: 3.3em;
+        @include radius;
+        min-height: 4em;
+        max-height: 4em;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
         @include shadow (lighten($fourth-color, 55%));
         &--description {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 0.3em 0;
+            padding: 0.6em;
             width: 80%;
+            h3 {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
             p {
                 font-size: $small-font;
                 width: 100%;
@@ -211,7 +251,8 @@
             display: flex;
             flex-direction: column-reverse;
             font-weight: 600;
-            width: 15%;
+            width: 10%;
+            padding: 0.6em 0;
         }
     }
 }
